@@ -2,12 +2,12 @@ from sqlite3 import Connection
 
 from aiogram import Router, Bot
 from aiogram.types import Message
-from aiogram.dispatcher.filters import Text
+from aiogram.filters import Text
 
 router = Router()
 
 
-@router.message(Text(text_startswith='RO', text_ignore_case=True))
+@router.message(Text(startswith='RO', ignore_case=True))
 async def ro_warn_handler(msg: Message, bot: Bot, ro_connect: Connection):
     if reply := msg.reply_to_message:
         cur = ro_connect.cursor()
