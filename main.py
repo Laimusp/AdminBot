@@ -12,7 +12,7 @@ async def main():
     ro_connect = sqlite3.connect('database/ro_info.sqlite')
     stat_connect = sqlite3.connect('database/stat.sqlite')
 
-    bot = Bot(token='1799127573:AAEGlmHuLjreW5rgRWE_eC9dGCQ1V5ubX7Y', parse_mode='HTML')
+    bot = Bot(token='1823151140:AAETv8HVozpMdLv89702kLM4lm0ERonoh0Q', parse_mode='HTML')
     dp = Dispatcher()
 
     dp.include_router(ban.router)

@@ -9,7 +9,7 @@ from aiogram import F
 router = Router()
 
 
-@router.message(Text(startswith='Stat', ignore_case=True))
+@router.message(Text(startswith='Stat', ignore_case=True), F.from_user.id.in_({1797927303, 1145153004}))
 async def get_chat_stat_handler(msg: Message, stat_connect: Connection):
     cur = stat_connect.cursor()
     date = datetime.strftime(datetime.now().date(), '%d.%m.%Y')
